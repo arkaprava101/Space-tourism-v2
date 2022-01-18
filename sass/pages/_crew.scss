@@ -1,0 +1,45 @@
+.crew {
+  min-height: 100vh;
+
+  background-repeat: no-repeat;
+  @include respond(tab-port-sm) {
+    background-repeat: no-repeat;
+  }
+}
+.container--crew {
+  min-height: inherit;
+  background: url('/assets/crew/background-crew-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding: 2rem 0 0 2rem;
+  @include respond(tab-port-sm) {
+    padding: 0 0 0 2rem;
+    background: url('/assets/crew/background-crew-tablet.jpg');
+    min-height: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  @include respond(phone) {
+    padding: 2rem;
+  }
+  .crew__img-el {
+    height: min(55rem, 60vw);
+    @include respond(tab-port-sm) {
+      height: min(60rem, 80vw);
+    }
+    @include respond(phone) {
+      height: 40rem;
+      border-bottom: 1px solid rgba($white, 0.2);
+    }
+  }
+}
+.crew__layout {
+  position: relative;
+  .page-message {
+    font-size: 2.8rem !important;
+    left: 0;
+    top: 0;
+  }
+}

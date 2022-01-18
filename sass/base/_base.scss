@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  @include respond(tab-land-lg) {
+    /* 1rem = 9px */
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-land-sm) {
+    /* 1rem = 8px */
+    font-size: 50%;
+  }
+  @include respond(tab-port-lg) {
+    /* 1rem = 7px */
+    font-size: 43.75%;
+    //this font size also applies for phone as well
+  }
+}

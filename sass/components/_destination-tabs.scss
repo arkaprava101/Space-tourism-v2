@@ -1,0 +1,130 @@
+.tab {
+  font-size: 1.6rem;
+  color: $body-text-primary-color;
+  column-gap: 3rem;
+  @include respond(tab-port-sm) {
+    justify-content: center;
+  }
+
+  &__item {
+    list-style-type: none;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.5s ease;
+    &:hover {
+      border-bottom: 3px solid rgba($white, 0.5);
+    }
+    @include respond(tab-land-lg) {
+      font-size: 2rem;
+    }
+    @include respond(tab-land-sm) {
+      font-size: 2.25rem;
+    }
+    @include respond(tab-port-sm) {
+      font-size: 2.29rem;
+    }
+  }
+  &__item--active,
+  &__item--active:hover {
+    border-bottom: 3px solid $white;
+    color: $white;
+  }
+}
+
+.tab__content {
+  font-size: 1.8rem;
+  @include respond(tab-port-sm) {
+    text-align: center;
+  }
+  .destination__name {
+    @include respond(tab-port-sm) {
+      font-size: 11.43rem;
+    }
+    @include respond(phone) {
+      font-size: 8rem;
+    }
+  }
+  .destination__desc {
+    margin-bottom: 5rem;
+    @include respond(tab-port-sm) {
+      margin: 0 auto;
+      width: 90%;
+      margin-bottom: min(2vh, 2rem);
+      font-size: 2.29rem;
+    }
+    @include respond(phone) {
+      font-size: 2.15rem;
+    }
+  }
+  .destination__info {
+    padding-top: 3rem;
+    border-top: 1px solid rgba($white, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: min(3vw, 2rem);
+    @include respond(tab-port-sm) {
+      justify-content: center;
+      margin: 0 auto;
+    }
+    @include respond(phone) {
+      width: 90%;
+      flex-direction: column;
+      row-gap: 2rem;
+      font-size: 2.15rem;
+    }
+    .destination__dist,
+    .destination__time {
+      p:nth-of-type(1) {
+        text-transform: uppercase;
+        @include respond(tab-port-sm) {
+          font-size: 2rem;
+        }
+      }
+      p:nth-of-type(2) {
+        font-family: 'Bellefair', serif;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 2.8rem;
+        @include respond(tab-land-lg) {
+          font-size: 3.11rem;
+        }
+        @include respond(tab-land-sm) {
+          font-size: 3.5rem;
+        }
+        @media screen and (max-width: 1064px) {
+          font-size: min(2.5vw, 4rem);
+        }
+        @include respond(tab-port-sm) {
+          font-size: 4rem;
+        }
+      }
+      @include respond(tab-port-sm) {
+        margin: 0 5rem;
+      }
+    }
+  }
+}
+.destination__layout {
+  @include respond(tab-port-sm) {
+    position: relative;
+  }
+}
+.destination__layout--first-box {
+  position: relative;
+  @include respond(tab-port-sm) {
+    position: static;
+  }
+}
+
+.destination__img-el {
+  width: 45rem;
+  height: 45rem;
+  @include respond(tab-port-sm) {
+    margin: 2rem 0;
+  }
+  @include respond(phone) {
+    width: 35rem;
+    height: 35rem;
+  }
+}

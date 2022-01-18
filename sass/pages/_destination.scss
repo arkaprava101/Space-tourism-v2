@@ -1,0 +1,48 @@
+.destination {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  @include respond(tab-port-sm) {
+    background-repeat: no-repeat;
+  }
+}
+.container--destination {
+  min-height: inherit;
+  background: url('/assets/destination/background-destination-desktop.jpg');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding: 2rem 0 0 2rem;
+  position: relative;
+  @include respond(tab-port-sm) {
+    padding: 0 0 0 2rem;
+    background: url('/assets/destination/background-destination-tablet.jpg');
+    min-height: inherit;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  .page-message {
+    top: 30%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+    left: 5%;
+    z-index: 999999;
+    @include respond(tab-port-sm) {
+      transform: rotate(0deg);
+      transform-origin: 50% 50% 0;
+      top: 8%;
+      left: 5%;
+      position: absolute;
+      .heading--4 {
+        font-size: 2rem;
+      }
+    }
+    @include respond(phone) {
+      top: 5%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

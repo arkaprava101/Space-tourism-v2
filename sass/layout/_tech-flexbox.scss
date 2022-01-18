@@ -1,0 +1,35 @@
+.container--tech {
+  display: flex;
+  flex-direction: column;
+  .tech__layout {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    @include respond(tab-port-sm) {
+      flex-direction: column-reverse;
+      row-gap: min(3vh, 3rem);
+    }
+    &--first-box {
+      display: flex;
+      align-items: center;
+      flex: 0 1 50%;
+
+      column-gap: min(3vw, 5rem);
+      @include respond(tab-port-sm) {
+        flex-direction: column;
+        flex: 1;
+        text-align: center;
+      }
+    }
+    &--second-box {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      @include respond(tab-port-sm) {
+        flex: 0 1 35vh;
+        align-items: center;
+        margin-top: 6vh;
+      }
+    }
+  }
+}

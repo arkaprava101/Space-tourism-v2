@@ -1,0 +1,31 @@
+.container--homepage {
+  display: flex;
+  flex-direction: column;
+  .main {
+    flex: 1;
+  }
+}
+.homepage__layout {
+  display: flex;
+  align-items: center;
+  @include respond(tab-port-sm) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--first-box {
+    flex: 0 1 50%;
+    @include respond(tab-port-sm) {
+      text-align: center;
+    }
+  }
+  &--second-box {
+    flex: 0 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond(tab-port-sm) {
+      justify-content: space-between;
+    }
+  }
+}

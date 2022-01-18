@@ -1,0 +1,54 @@
+.container--crew {
+  display: flex;
+  flex-direction: column;
+}
+
+.crew__layout {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+
+  @include respond(tab-port-sm) {
+    flex-direction: column;
+  }
+  @include respond(phone) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    row-gap: 5rem;
+  }
+  &--first-box {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    .tab--crew__content {
+      @include respond(tab-port-sm) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+    .tab--crew {
+      display: flex;
+    }
+  }
+  &--second-box {
+    min-height: 50rem;
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: center;
+    @include respond(tab-land-sm) {
+      align-self: center;
+      border-bottom: 1px solid rgba($white, 0.3);
+    }
+    @include respond(tab-port-sm) {
+      min-height: auto;
+      margin: 0 auto;
+      padding-top: 5rem;
+    }
+    @include respond(phone) {
+      flex: 0 1 30%;
+    }
+  }
+}

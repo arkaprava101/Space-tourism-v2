@@ -1,0 +1,67 @@
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
+
+/* 
+heading - 1 : 15rem  ; Bellefair
+heading - 2 : 10rem  ; Bellefair
+heading - 3 : 5.6rem  ; Bellefair
+heading - 4 : 3.2rem  ; Bellefair
+heading - 5 : 2.8rem  ; 4.75 character space , Barlow Condensed
+
+subheading -1 : 2.8rem ; Bellefair
+subheading -2 : 1.4rem - 2.35 charac space  ,  Barlow Condensed
+NAV TEXT - 1.6rem; 2.7 character space 
+
+    body text 
+    
+*/
+body {
+  font-family: 'Barlow Condensed', sans-serif;
+
+  line-height: 1.8;
+  color: $body-text-primary-color;
+}
+.heading--1 {
+  font-family: 'Bellefair', serif;
+  font-weight: lighter;
+  font-size: 15rem;
+  color: $white;
+  @include respond(tab-port-sm) {
+    font-size: 15rem;
+  }
+}
+.heading--2 {
+  font-family: 'Bellefair', serif;
+  font-weight: lighter;
+  font-size: 10rem;
+  color: $white;
+  text-transform: uppercase;
+}
+.heading--3 {
+  font-family: 'Bellefair', serif;
+  font-weight: lighter;
+  font-size: 5.6rem;
+  color: $white;
+  text-transform: uppercase;
+}
+.heading--4 {
+  font-family: 'Bellefair', serif;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.heading--5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: lighter;
+  font-size: 2.8rem;
+  letter-spacing: 4.75px;
+}
+.page-message {
+  position: absolute;
+  text-transform: uppercase !important;
+  font-size: 2.8rem !important;
+  span {
+    color: rgba($white, 0.25);
+  }
+}

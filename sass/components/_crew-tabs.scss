@@ -1,0 +1,88 @@
+.tab--crew {
+  color: $body-text-primary-color;
+  column-gap: 2rem;
+
+  @include respond(tab-port-sm) {
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  .tab__item--circle {
+    list-style-type: none;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: rgba($white, 0.5);
+    transition: background-color 0.5s ease;
+    &:hover {
+      background-color: $white;
+      @include respond(tab-port-sm) {
+        background-color: rgba($white, 0.5);
+      }
+    }
+  }
+  .tab__item--circle--active,
+  .tab__item--circle--active:hover {
+    background-color: $white;
+  }
+}
+
+.tab--crew__content {
+  font-size: 1.8rem;
+  min-height: min(17vw, 35rem);
+  transition: all 1s;
+  @include respond(tab-land-sm) {
+    margin-bottom: 2rem;
+  }
+  @include respond(tab-port-lg) {
+    margin-bottom: 0rem;
+    min-height: min(25vw, 30rem);
+  }
+  @include respond(tab-port-sm) {
+    min-height: min(40vw, 30rem);
+  }
+  @include respond(phone) {
+    min-height: min(45vw, 25rem);
+    margin-bottom: 2rem;
+  }
+  .heading--4 {
+    @include respond(tab-land-sm) {
+      font-size: 2.4rem;
+    }
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+  .heading--3 {
+    @media screen and (max-width: 1500px) {
+      font-size: 4rem;
+    }
+    @include respond(tab-land-sm) {
+      font-size: 3.2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.8rem;
+    }
+  }
+
+  @include respond(tab-port-sm) {
+    text-align: center;
+  }
+  .crew__desc {
+    @include respond(tab-land-sm) {
+      font-size: 1.875rem;
+    }
+    @include respond(tab-port-lg) {
+      font-size: 2.14rem;
+    }
+    @include respond(tab-port-sm) {
+      margin: 0 auto;
+      width: 80%;
+    }
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}

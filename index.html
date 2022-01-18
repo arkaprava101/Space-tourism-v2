@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="sass/main.scss" />
+    <script type="module" defer src="js/script.js"></script>
+
+    <title>Frontend Mentor | Space tourism website</title>
+  </head>
+  <body class="homepage">
+    <div class="container--homepage">
+      <nav class="nav">
+        <img src="assets/shared/logo.svg" alt="" class="logo" />
+
+        <ul class="nav__links">
+          <li class="nav__items">
+            <a href="#" class="nav__link"
+              ><span class="text-bold">00</span>Home</a
+            >
+          </li>
+          <li class="nav__items">
+            <a href="/destination.html" class="nav__link"
+              ><span class="text-bold">01</span>Destination</a
+            >
+          </li>
+          <li class="nav__items">
+            <a href="/crew.html" class="nav__link"
+              ><span class="text-bold">02</span>Crew</a
+            >
+          </li>
+          <li class="nav__items">
+            <a href="/technology.html" class="nav__link"
+              ><span class="text-bold">03 </span>Technology</a
+            >
+          </li>
+        </ul>
+        <a href="#" class="burger-menu"
+          ><span class="line line--1"></span> <span class="line line--2"></span
+          ><span class="line line--3"></span
+        ></a>
+      </nav>
+      <main class="main homepage__layout">
+        <section class="hero__box homepage__layout--first-box">
+          <h5 class="heading--5 hero__box--sub-heading">
+            So, you want to travel to
+          </h5>
+          <h1 class="heading--1 hero__box--heading">space</h1>
+          <p class="hero__box--para paragraph">
+            Let’s face it; if you want to go to space, you might as well
+            genuinely go to outer space and not hover kind of on the edge of it.
+            Well sit back, and relax because we’ll give you a truly out of this
+            world experience!
+          </p>
+        </section>
+        <section class="explore homepage__layout--second-box">
+          <a href="/destination.html" class="explore--btn"
+            ><span>explore</span></a
+          >
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
